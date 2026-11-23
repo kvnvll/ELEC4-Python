@@ -1,0 +1,3 @@
+
+Hello! This is my sample text file for P4.
+File operation finished.

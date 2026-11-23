@@ -1,0 +1,87 @@
+# ELEC 4 - Python Programming
+
+**Name:** VILA, KEVIN V.  
+**Section:** IV-BSIT C  
+**Course Code:** ELEC 4  
+**Course Title:** Python Programming
+
+## Project Description
+
+This repository contains my Python programming activities for Set 1. These activities helped me understand and practice different Python programming concepts, including functions, modules, lists, sets, exception handling, and file handling.
+
+# Set 1 Activities
+
+## P1 - Student Grade Calculator
+
+A program that allows users to enter student grades and calculate the average, highest grade, lowest grade, and pass or fail status.
+
+**Folder:** [P1 - Student Grade Calculator](set1/p1/)
+
+**Run Command:**
+```bash
+python set1/p1/p1_grade_calculator.py
+```
+
+**Screenshot:**
+
+![P1 Output](set1/p1/screenshot/Screenshot%202026-11-22%20003211.png)
+
+## P2 - Custom Module: Student Utilities
+
+A program that uses a custom Python module to calculate student averages, pass or fail status, highest grades, and lowest grades.
+
+**Folder:** [P2 - Custom Module](set1/p2/)
+
+**Run Command:**
+```bash
+python set1/p2/main.py
+```
+
+**Screenshot:**
+
+![P2 Output](set1/p2/screenshot/Screenshot%202026-11-23%20175658.png)
+
+## P3 - Student Record Manager
+
+A program that manages student records. It allows users to add, remove, search, and display student names while preventing duplicate entries.
+
+**Folder:** [P3 - Student Record Manager](set1/p3/)
+
+**Run Command:**
+```bash
+python set1/p3/p3_student_manager.py
+```
+
+**Screenshots:**
+
+![P3 Output 1](set1/p3/screenshot/Screenshot%202026-11-23%20180054.png)
+
+![P3 Output 2](set1/p3/screenshot/Screenshot%202026-11-23%20180126.png)
+
+## P4 - Safe Menu Program
+
+A menu-driven program that demonstrates exception handling by handling invalid input, division by zero, and missing files.
+
+**Folder:** [P4 - Safe Menu Program](set1/p4/)
+
+**Run Command:**
+```bash
+python set1/p4/p4_safe_menu.py
+```
+
+**Screenshot:**
+
+![P4 Output](set1/p4/screenshots/Screenshot%202026-11-23%20180457.png)
+
+## Technologies Used
+
+- Python
+- Visual Studio Codium
+- Git
+- GitHub
+
+## Repository Organization
+
+The repository is organized into four activity folders inside the `set1` folder. Each activity contains its Python source code and screenshots.
+
+The `.gitignore` file is also included to prevent unnecessary Python cache files from being uploaded to the repository.
