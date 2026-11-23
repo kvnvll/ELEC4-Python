@@ -39,7 +39,6 @@ Screenshots for each activity are placed in their respective folders.
 
 ![P3 Add Student](set1/p3/screenshot/1.AddStudent.png)
 
-![P3 Remove Student](set1/p3/screenshot/2_RemoveStudent.png)
 
 ### P4 - Safe Menu Program
 
