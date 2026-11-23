@@ -5,12 +5,6 @@
 # Date: November 2026
 
 
-# Global variable: This variable can be accessed by different functions in the program.
-# It stores the grades entered by the user.
-# Local variables are created inside functions and can only be used within those functions.
-# Using local variables helps prevent unnecessary changes to data outside a function.
-
-
 def enter_grades():
     student_grades = []
 
@@ -113,3 +107,10 @@ while True:
 
     else:
         print("\nInvalid choice! Please select 1, 2, or 3.")
+
+
+# Variable Scope Explanation:
+# The grades variable is a global variable because it is created outside the functions.
+# It is used by the main program to store the grades entered by the user.
+# Local variables like student_grades and average are created inside functions.
+# They can only be used within the function where they are declared.
