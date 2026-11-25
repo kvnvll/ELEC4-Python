@@ -6,6 +6,7 @@
 
 import student_utils
 from student_utils import pass_fail
+from datetime import datetime
 
 
 def main():
@@ -41,6 +42,7 @@ def main():
 
     print("\n===== STUDENT GRADE RESULTS =====")
 
+    print("Report Date:", datetime.now().strftime("%B %d, %Y"))
     print("Grades:", grades)
     print("Average:", round(student_utils.average(grades), 2))
     print("Highest Grade:", student_utils.highest(grades))

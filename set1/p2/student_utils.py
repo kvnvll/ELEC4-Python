@@ -1,18 +1,12 @@
 
-# P2 - Student Utilities Module
-
-import statistics
+# Name: VILA, KEVIN V.
+# Section: IV-BSIT C
+# Activity: P2 - Custom Module
+# Date: November 2026
 
 
 def average(grades):
-    return statistics.mean(grades)
-
-
-def pass_fail(grades):
-    if average(grades) >= 75:
-        return "PASSED"
-    else:
-        return "FAILED"
+    return sum(grades) / len(grades)
 
 
 def highest(grades):
@@ -21,3 +15,10 @@ def highest(grades):
 
 def lowest(grades):
     return min(grades)
+
+
+def pass_fail(grades):
+    if average(grades) >= 75:
+        return "PASSED"
+    else:
+        return "FAILED"
