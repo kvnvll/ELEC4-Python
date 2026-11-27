@@ -1,52 +1,120 @@
-ELEC4-Python-Vila
 
-Full Name: VILA, KEVIN V.
-Section: IV-BSIT C
-Course Code: ELEC 4 - Python Programming
-Course Title: Python Programming
+# Name: VILA, KEVIN V.
+# Section: IV-BSIT C
+# Activity: P3 - Student Record Manager
+# Date: November 2026
 
-Set 1 Activities
-Activity	Description	Folder
-P1	Student Grade Calculator	set1/p1
-P2	Custom Student Utilities Module	set1/p2
-P3	Student Record Manager	set1/p3
-P4	Safe Menu Program	set1/p4
-How to Run
-powershell
-python set1/p1/p1_grade_calculator.py
-python set1/p2/main.py
-python set1/p3/p3_student_manager.py
-python set1/p4/p4_safe_menu.py
+# A list stores student names and keeps their original order.
+# A set stores unique values and does not allow duplicate elements.
+# Lists can contain duplicate names, while sets automatically prevent duplicates.
+# Lists are useful for displaying and managing records, while sets help check duplicates quickly.
 
-Screenshots
+student_names = []
+student_set = set()
 
-Screenshots for each activity are placed in their respective folders.
 
-P1 - Student Grade Calculator
+def add_student(student_names, student_set):
+    name = input("Enter student name: ").strip()
 
-!P1 Output
+    if name == "":
+        print("Student name cannot be empty.")
+        return
 
-P2 - Custom Module: Student Utilities
+    if name.lower() in student_set:
+        print("Student already exists!")
+    else:
+        student_names.append(name)
+        student_set.add(name.lower())
+        print("Student added successfully!")
 
-!P2 Output
 
-P3 - Student Record Manager
+def remove_student(student_names, student_set):
+    name = input("Enter student name to remove: ").strip()
 
-!P3 Add Student
+    for student in student_names:
+        if student.lower() == name.lower():
+            student_names.remove(student)
+            student_set.remove(student.lower())
+            print("Student removed successfully!")
+            return
 
-!P3 Remove Student
+    print("Student not found!")
 
-P4 - Safe Menu Program
 
-!P4 Output
+def search_student(student_names):
+    name = input("Enter name to search: ").strip().lower()
 
-Technologies Used
-Python
-Visual Studio Codium
-Git
-GitHub
-Repository Organization
+    if name == "":
+        print("Please enter a name to search.")
+        return
 
-The repository contains four Python programming activities organized inside the set1 folder. Each activity has its own source code and screenshots.
+    found_students = []
 
-The .gitignore file is included to prevent unnecessary Python cache files from being uploaded to the repository.
+    for student in student_names:
+        if name in student.lower():
+            found_students.append(student)
+
+    if found_students:
+        print("\n===== SEARCH RESULTS =====")
+
+        for i, student in enumerate(found_students, start=1):
+            print(f"{i}. {student}")
+
+        print("Total found:", len(found_students))
+    else:
+        print("No matching student found.")
+
+
+def display_students(student_names):
+    if not student_names:
+        print("\nNo student records available.")
+        return
+
+    sorted_students = sorted(student_names, key=str.lower)
+
+    print("\n===== STUDENT RECORDS =====")
+
+    for i, student in enumerate(sorted_students, start=1):
+        print(f"{i}. {student}")
+
+    print("---------------------------")
+    print("Total Students:", len(student_names))
+
+
+def display_menu():
+    print("\n===== STUDENT RECORD MANAGER =====")
+    print("1. Add Student")
+    print("2. Remove Student")
+    print("3. Search Student")
+    print("4. Display All Students")
+    print("5. Exit")
+
+
+def main():
+    while True:
+        display_menu()
+
+        choice = input("Enter your choice: ")
+
+        if choice == "1":
+            add_student(student_names, student_set)
+
+        elif choice == "2":
+            remove_student(student_names, student_set)
+
+        elif choice == "3":
+            search_student(student_names)
+
+        elif choice == "4":
+            display_students(student_names)
+
+        elif choice == "5":
+            print("\nThank you for using Student Record Manager!")
+            break
+
+        else:
+            print("Invalid choice! Please select from 1 to 5.")
+
+
+if __name__ == "__main__":
+    main()
